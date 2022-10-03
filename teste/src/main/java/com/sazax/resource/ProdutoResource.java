@@ -28,8 +28,8 @@ public class ProdutoResource {
 	}
 	
 	@POST
-	@Produces({"application/json", "text/csv"})
-	@Consumes({"application/json", "text/csv"})
+	@Produces({"application/json"})
+	@Consumes({"application/json"})
 	public Response addNewProduto(Produto produto) throws DaoException {
 		produto = dao.addProduto(produto);
 		return Response.ok(produto).build();
