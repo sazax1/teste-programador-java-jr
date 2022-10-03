@@ -23,8 +23,8 @@ public class ClienteResource {
 	
 	
 	@POST
-	@Produces({"application/json", "text/csv"})
-	@Consumes({"application/json", "text/csv"})
+	@Produces({"application/json"})
+	@Consumes({"application/json"})
 	public Response addNewCliente(Cliente cliente) throws DaoException {
 		cliente = dao.addCliente(cliente);
 		return Response.ok(cliente).build();
